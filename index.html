@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Order</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+        background: #1f2937;
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    /* MAIN CONTENT */
+    main {
+        flex: 1;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .btn-container {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .order-btn {
+        background: #22c55e;
+        color: white;
+        padding: 14px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .order-btn:hover {
+        background: #16a34a;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #1f2937;
+        color: #ccc;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    My Store
+</header>
+
+<main>
+    <h2>Our Products</h2>
+
+    <div class="gallery">
+        <img src="https://via.placeholder.com/300" alt="Product 1">
+        <img src="https://via.placeholder.com/300" alt="Product 2">
+        <img src="https://via.placeholder.com/300" alt="Product 3">
+        <img src="https://via.placeholder.com/300" alt="Product 4">
+    </div>
+
+    <div class="btn-container">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8olOexryHB54nJ_kXWvgXdG5erYS--rT5kKmnc-vjHS4W2w/viewform?usp=publish-editor" target="_blank" class="order-btn">
+            Place Order
+        </a>
+    </div>
+</main>
+
+<footer>
+    © 2025 My Store | All Rights Reserved
+</footer>
+
+</body>
+</html>
