@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ThidirVivasayi Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thidir Vivasayi Products</title>
 
 <style>
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f6f8;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f0fdf4;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -16,97 +17,138 @@
 
     /* HEADER */
     header {
-        background: #1f2937;
+        background: linear-gradient(90deg, #166534, #22c55e);
         color: white;
-        padding: 18px;
+        padding: 16px;
         text-align: center;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
+        letter-spacing: 1px;
     }
 
-    /* MAIN CONTENT */
     main {
         flex: 1;
     }
 
     h2 {
         text-align: center;
-        margin-top: 20px;
-        color: #333;
+        margin: 18px 0;
+        color: #14532d;
+        font-size: 18px;
     }
 
+    /* PRODUCT GALLERY */
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        max-width: 900px;
-        margin: auto;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 16px;
     }
 
-    .gallery img {
+    .product {
+        background: white;
+        border-radius: 16px;
+        padding: 12px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        text-align: center;
+    }
+
+    .product img {
         width: 100%;
-        height: 200px;
+        height: 220px;
         object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        transition: transform 0.3s;
+        border-radius: 14px;
     }
 
-    .gallery img:hover {
-        transform: scale(1.05);
+    .product-name {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #166534;
     }
 
+    /* ORDER BUTTON */
     .btn-container {
         text-align: center;
-        margin: 30px 0;
+        margin: 24px 0 32px;
     }
 
     .order-btn {
-        background: #22c55e;
+        display: inline-block;
+        background: #16a34a;
         color: white;
-        padding: 14px 30px;
+        padding: 14px 34px;
         font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
+        font-weight: 600;
+        border-radius: 30px;
         text-decoration: none;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.2);
     }
 
     .order-btn:hover {
-        background: #16a34a;
+        background: #15803d;
     }
 
     /* FOOTER */
     footer {
-        background: #1f2937;
-        color: #ccc;
+        background: #14532d;
+        color: #d1fae5;
         text-align: center;
         padding: 12px;
         font-size: 14px;
     }
-</style>
 
+    /* TABLET */
+    @media (min-width: 600px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 900px;
+            margin: auto;
+        }
+    }
+
+    /* DESKTOP */
+    @media (min-width: 900px) {
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
 </head>
+
 <body>
 
 <header>
-    My Store
+    Thidir Vivasayi
 </header>
 
 <main>
-    <h2>Our Products</h2>
+    <h2>Our Natural Products</h2>
 
     <div class="gallery">
-        <img src="https://raw.githubusercontent.com/thidirvivasayi/thidirvivasayi_products/main/images/coc.png" alt="Product 1">
-        <img src="https://raw.githubusercontent.com/thidirvivasayi/thidirvivasayi_products/main/images/gingelly-oil.jpg" alt="Product 2">
-        <img src="https://raw.githubusercontent.com/thidirvivasayi/thidirvivasayi_products/main/images/ground2_450x.jpg" alt="Product 3">
+
+        <div class="product">
+            <img src="https://raw.githubusercontent.com/thidirvivasayi/thidirvivasayi_products/main/images/coc.png" alt="Coconut Oil">
+            <div class="product-name">Cold Pressed Coconut Oil</div>
+        </div>
+
+        <div class="product">
+            <img src="https://raw.githubusercontent.com/thidirvivasayi/thidirvivasayi_products/main/images/gingelly-oil.jpg" alt="Gingelly Oil">
+            <div class="product-name">Traditional Gingelly Oil</div>
+        </div>
+
+        <div class="product">
+            <img src="https://raw.githubusercontent.com/thidirvivasayi/thidirvivasayi_products/main/images/ground2_450x.jpg" alt="Groundnut Oil">
+            <div class="product-name">Natural Groundnut Oil</div>
+        </div>
+
     </div>
 
     <div class="btn-container">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8olOexryHB54nJ_kXWvgXdG5erYS--rT5kKmnc-vjHS4W2w/viewform?usp=publish-editor" target="_blank" class="order-btn">
-            Place Order
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8olOexryHB54nJ_kXWvgXdG5erYS--rT5kKmnc-vjHS4W2w/viewform?usp=publish-editor"
+           target="_blank"
+           class="order-btn">
+            🌿 Place Order
         </a>
     </div>
 </main>
